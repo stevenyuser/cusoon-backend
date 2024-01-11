@@ -21,6 +21,7 @@ const app = (0, express_1.default)();
 const port = 8080;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
+app.options('*', (0, cors_1.default)());
 // sample route
 app.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.status(200).json({ message: "hello" });

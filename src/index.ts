@@ -13,6 +13,7 @@ const port = 8080
 
 app.use(express.json())
 app.use(cors())
+app.options('*', cors());
 
 // sample route
 app.get("/", async (req, res) => {
